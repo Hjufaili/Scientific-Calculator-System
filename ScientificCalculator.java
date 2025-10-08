@@ -86,6 +86,23 @@ public class ScientificCalculator {
         //return Math.cos(angleInDegrees);
     }
 
+    public static double tangent(double angleInDegrees) {
+        double sinValue = sine(angleInDegrees);
+        double cosValue = cosine(angleInDegrees);
+        double result = sinValue / cosValue;
+
+        if (cosValue == 0) {
+            System.out.println("Tangent is undefined for this angle (cos = 0).");
+            return Double.NaN;
+        }
+
+        lastResult = result;
+
+        return result;
+        //return Math.tan(angleInDegrees);
+
+    }
+
 
 }
 
