@@ -72,6 +72,20 @@ public class ScientificCalculator {
         //return Math.sin(angleInDegrees);
     }
 
+    public static double cosine(double angleInDegrees) {
+        double sum = 0;
+        int sign = 1;
+        for (int i = 0; i < 10; i++) {
+            int termPower = 2 * i;
+            double term = power(angleInDegrees, termPower) / factorial(termPower);
+            sum += sign * term;
+            sign *= -1;
+        }
+        lastResult = sum;
+        return sum;
+        //return Math.cos(angleInDegrees);
+    }
+
 
 }
 
