@@ -110,6 +110,36 @@ public class ScientificCalculator {
         //return Math.log10(value);
     }
 
+    public static double naturalLog(double value) {
+        if (value <= 0) {
+            System.out.println("Logarithm undefined for non-positive numbers.");
+            return Double.NaN;
+        }
+
+
+        int adjust = 0;
+        while (value > 2) {
+            value /= 2;
+            adjust++;
+        }
+
+        double y = value - 1;
+        double result = 0;
+        int sign = 1;
+
+        for (int n = 1; n <= 20; n++) {
+            double term = power(y, n) / n;
+            result += sign * term;
+            sign *= -1;
+        }
+
+        result += adjust * 0.69314718056; // ln(2) ≈ 0.6931
+        lastResult = result;
+        return result;
+
+        //return Math.log(value);
+    }
+
 
 }
 
