@@ -22,6 +22,17 @@ public class ScientificCalculator {
         return lastResult;
     }
 
+    public static double power(double base, double exp) {
+
+        double result = 1;
+        for (int i = 0; i < exp; i++) {
+            result *= base;
+        }
+        lastResult = result;
+
+        return result;
+    }
+
 
 }
 
