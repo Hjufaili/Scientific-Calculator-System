@@ -17,6 +17,11 @@ public class ScientificCalculator {
         return lastResult;
     }
 
+    public static double divide(double a, double b) {
+        lastResult = a / b;
+        return lastResult;
+    }
+
 
 }
 
