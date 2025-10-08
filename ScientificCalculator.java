@@ -32,6 +32,19 @@ public class ScientificCalculator {
 
         return result;
     }
+    public static double squareRoot(double value) {
+        double guess = value / 2;
+        double prev = 0;
+
+        while (guess != prev) {
+            prev = guess;
+            guess = (value / guess + guess) / 2;
+        }
+        lastResult = guess;
+
+        return guess;
+        //return Math.sqrt(value);
+    }
 
 
 }
