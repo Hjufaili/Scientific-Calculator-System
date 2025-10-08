@@ -7,8 +7,12 @@ public class ScientificCalculator {
         return lastResult;
 
     }
+    public static double subtract(double a, double b) {
+        lastResult = a - b;
+        return lastResult;
+    }
 
-    
+
 
 }
 
