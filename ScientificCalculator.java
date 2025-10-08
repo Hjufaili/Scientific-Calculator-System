@@ -32,6 +32,7 @@ public class ScientificCalculator {
 
         return result;
     }
+
     public static double squareRoot(double value) {
         double guess = value / 2;
         double prev = 0;
@@ -44,6 +45,15 @@ public class ScientificCalculator {
 
         return guess;
         //return Math.sqrt(value);
+    }
+
+    public static double factorial(int n) {
+        double result = 1;
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+        lastResult = result;
+        return result;
     }
 
 
