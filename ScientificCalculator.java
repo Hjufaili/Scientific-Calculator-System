@@ -103,6 +103,13 @@ public class ScientificCalculator {
 
     }
 
+    public static double logarithm(double value) {
+        double result = naturalLog(value) / naturalLog(10);
+        lastResult = result;
+        return result;
+        //return Math.log10(value);
+    }
+
 
 }
 
